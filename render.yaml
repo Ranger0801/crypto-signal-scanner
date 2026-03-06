@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: crypto-signal-scanner
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn start:app --workers 2 --threads 2 --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "false"
+      - key: DATABASE_URL
+        value: sqlite:///crypto_signals.db
+    autoDeploy: true

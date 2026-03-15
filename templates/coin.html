@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ symbol }} — Signal Analysis{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ symbol }}</h1>
+  <p class="subtitle" id="coin-subtitle">Loading...</p>
+</div>
+<section class="stats-row">
+  <div class="stat-card" id="coin-price"><span class="stat-number">—</span><span class="stat-label">Price</span></div>
+  <div class="stat-card" id="coin-change"><span class="stat-number">—</span><span class="stat-label">24h Change</span></div>
+  <div class="stat-card" id="coin-volume"><span class="stat-number">—</span><span class="stat-label">Volume 24h</span></div>
+</section>
+<section class="section">
+  <h2>Recent Signals</h2>
+  <div id="coin-signals"><div class="loading">Loading...</div></div>
+</section>
+{% endblock %}
+{% block scripts %}<script>loadCoinPage("{{ symbol }}");</script>{% endblock %}

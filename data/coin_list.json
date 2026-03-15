@@ -1,0 +1,12 @@
+{"coins":[
+  {"symbol":"BTC",  "name":"Bitcoin",   "coingecko_id":"bitcoin"},
+  {"symbol":"ETH",  "name":"Ethereum",  "coingecko_id":"ethereum"},
+  {"symbol":"SOL",  "name":"Solana",    "coingecko_id":"solana"},
+  {"symbol":"LINK", "name":"Chainlink", "coingecko_id":"chainlink"},
+  {"symbol":"AVAX", "name":"Avalanche", "coingecko_id":"avalanche-2"},
+  {"symbol":"BNB",  "name":"BNB",       "coingecko_id":"binancecoin"},
+  {"symbol":"ADA",  "name":"Cardano",   "coingecko_id":"cardano"},
+  {"symbol":"DOT",  "name":"Polkadot",  "coingecko_id":"polkadot"},
+  {"symbol":"MATIC","name":"Polygon",   "coingecko_id":"matic-network"},
+  {"symbol":"DOGE", "name":"Dogecoin",  "coingecko_id":"dogecoin"}
+]}

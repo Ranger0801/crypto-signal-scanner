@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — Crypto Signal Scanner{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Signal Dashboard</h1>
+  <p class="subtitle">19 indicators · 26 signal types · updated every 5 minutes</p>
+</div>
+<section class="stats-row">
+  <div class="stat-card" id="stat-total"><span class="stat-number">—</span><span class="stat-label">Signals (24h)</span></div>
+  <div class="stat-card bullish-card" id="stat-bullish"><span class="stat-number">—</span><span class="stat-label">Bullish</span></div>
+  <div class="stat-card bearish-card" id="stat-bearish"><span class="stat-number">—</span><span class="stat-label">Bearish</span></div>
+  <div class="stat-card" id="stat-strong"><span class="stat-number">—</span><span class="stat-label">Strong (Score 7+)</span></div>
+</section>
+<section class="section">
+  <h2>🔥 Strong Signals</h2>
+  <div id="strong-signals" class="signal-grid"><div class="loading">Loading...</div></div>
+</section>
+<section class="section">
+  <h2>📡 Latest Signals</h2>
+  <div class="filter-bar">
+    <select id="filter-timeframe"><option value="">All Timeframes</option><option value="1h">1H</option><option value="4h">4H</option><option value="1d">1D</option></select>
+    <select id="filter-direction"><option value="">All Directions</option><option value="bullish">Bullish</option><option value="bearish">Bearish</option></select>
+  </div>
+  <div id="latest-signals"><div class="loading">Loading...</div></div>
+</section>
+<section class="section two-col">
+  <div><h2>📈 Top Gainers</h2><div id="top-gainers"><div class="loading">Loading...</div></div></div>
+  <div><h2>📉 Top Losers</h2><div id="top-losers"><div class="loading">Loading...</div></div></div>
+</section>
+{% endblock %}
+{% block scripts %}<script>loadDashboard();</script>{% endblock %}

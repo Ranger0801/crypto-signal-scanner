@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Signal Scanner{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Signal Scanner</h1>
+  <p class="subtitle">Filter across all 26 signal types</p>
+</div>
+<div class="filter-bar">
+  <select id="filter-timeframe"><option value="">All Timeframes</option><option value="1h">1H</option><option value="4h">4H</option><option value="1d">1D</option></select>
+  <select id="filter-direction"><option value="">All Directions</option><option value="bullish">Bullish 📈</option><option value="bearish">Bearish 📉</option></select>
+  <select id="filter-score"><option value="0">Min Score: Any</option><option value="3">Min Score: 3</option><option value="5">Min Score: 5</option><option value="7">Min Score: 7 (Strong)</option></select>
+  <button id="apply-filters" class="btn-primary">Apply</button>
+</div>
+<div id="scanner-results"><div class="loading">Loading...</div></div>
+{% endblock %}
+{% block scripts %}
+<script>
+  loadScanner();
+  document.getElementById("apply-filters").addEventListener("click", loadScanner);
+</script>
+{% endblock %}

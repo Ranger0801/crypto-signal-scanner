@@ -3,20 +3,7 @@ services:
     name: crypto-signal-scanner
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn "app:create_app()"
-    envVars:
-      - key: DATABASE_URL
-        value: postgresql://postgres:Ky2mam7wLWxZpplc@db.aliflptqyrunocawrgmr.supabase.co:5432/postgres
-      - key: SECRET_KEY
-        value: crypto-scanner-secret-2025
-      - key: DEBUG
-        value: "False"
-
-  - type: worker
-    name: crypto-scanner-worker
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python worker.py
+    startCommand: gunicorn "app:create_app()" --config gunicorn_config.py --workers 1 --timeout 120
     envVars:
       - key: DATABASE_URL
         value: postgresql://postgres:Ky2mam7wLWxZpplc@db.aliflptqyrunocawrgmr.supabase.co:5432/postgres

@@ -8,7 +8,7 @@ class Config:
 
     SQLALCHEMY_DATABASE_URI = os.getenv(
         "DATABASE_URL",
-        "postgresql://postgres:SqqG9cQKHPD2ebn7@db.rhnkyemmzgolmzpjvfgr.supabase.co:5432/postgres"
+        "postgresql://postgres:Ky2mam7wLWxZpplc@db.aliflptqyrunocawrgmr.supabase.co:5432/postgres"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ENGINE_OPTIONS = {"pool_recycle": 280, "pool_pre_ping": True}

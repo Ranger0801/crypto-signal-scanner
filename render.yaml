@@ -6,7 +6,7 @@ services:
     startCommand: gunicorn "app:create_app()"
     envVars:
       - key: DATABASE_URL
-        value: postgresql://postgres:SqqG9cQKHPD2ebn7@db.rhnkyemmzgolmzpjvfgr.supabase.co:5432/postgres
+        value: postgresql://postgres:Ky2mam7wLWxZpplc@db.aliflptqyrunocawrgmr.supabase.co:5432/postgres
       - key: SECRET_KEY
         value: crypto-scanner-secret-2025
       - key: DEBUG
@@ -19,7 +19,7 @@ services:
     startCommand: python worker.py
     envVars:
       - key: DATABASE_URL
-        value: postgresql://postgres:SqqG9cQKHPD2ebn7@db.rhnkyemmzgolmzpjvfgr.supabase.co:5432/postgres
+        value: postgresql://postgres:Ky2mam7wLWxZpplc@db.aliflptqyrunocawrgmr.supabase.co:5432/postgres
       - key: SECRET_KEY
         value: crypto-scanner-secret-2025
       - key: DEBUG
